@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>色彩之旅</title>
+		<style>
+		body{
+			margin:0;
+			padding: 0;
+		}
+		.one{
+			width:85%;
+			text-align:center;
+			margin: auto;
+		}
+		#bj{
+			width:90%;
+			border:7px dashed bisque;
+			-webkit-animation: mymove 5s infinite; /*边框颜色变化动画 */
+    		animation: mymove 5s infinite;
+		}
+		/* Chrome, Safari, Opera */
+		@-webkit-keyframes mymove {
+		    50% {border-color:mediumpurple;}
+		}
+		
+		/* Standard syntax */
+		@keyframes mymove {
+		    50% {border-color:mediumpurple;}
+		}
+		#b{
+			position:absolute;
+			top:50px;
+			left:-100px;	
+		}
+		#start{			
+			position:absolute;
+			width:20%;
+			top:510px;
+			left:800px;
+		}
+		#start:hover{
+			width:25%;
+			top:500px;
+			left:780px;
+		}
+		#start:active{
+			opacity:0.3;
+		}
+		#know{
+			position:absolute;
+			width:25%;
+			top:220px;
+			left:210px;
+		}
+		#know:hover{
+			width:28%;
+		}
+		#know:active{
+			opacity:0.3;
+		}
+		#r{
+			position:absolute;
+			width:20%;
+			top:100px;
+			left:200px;	
+		}
+		#r:hover{
+			width:22%;
+		}
+		#r:active{
+			opacity:0.3;
+		}
+	    #rule
+	    {
+	      display:none;
+	      border:0.3em solid aliceblue;
+	      width:45%;
+	      height:50%;
+	      border-radius: 10%;
+	      position:absolute;
+	      overflow-y:auto;
+	      margin: auto;
+	      top: 0;
+	      left: 0;
+	      right: 0;
+	      bottom: 0;
+	      background:lightblue;
+	      text-decoration:none;
+	    }
+	    #word{
+	    	font: 1.875em/120% Comic Sans MS;
+	    	text-align:center;
+	    }
+	    #word1{
+	    	font: 1.5em/120% Comic Sans MS;
+	    	text-align:center;
+	    }
+	</style>
+	
+	<script>
+		function show(
+			rule.style.display = "block";
+		)
+	</script>
+	</head>
+
+	<body>
+		<div class="one">
+			<img id="bj" src="img/bj.JPG"></img>
+			<img id="b" src="img/bear.png"></img>
+			<a href="javascript:show()"><img id="r" src="img/r.png"></img></a>
+		 	<div id="rule">
+		      	<a href="javascript:hide()"><img id="know" src="img/know.png"></img></a>
+		      	<p id="word">游戏规则:<br><br>30s挑战眼力</p>
+		      	<p id="word1">在倒计时结束之前找出每一关的不同颜色的圆片</p>
+		  </div>
+			<a href="game.html"><img src="img/begin.png" id="start"></img></a>
+		</div>
+		
+		<script>
+		var rule = document.getElementById('rule');
+		    function show()
+		    {
+		        rule.style.display = "block";
+		    }
+		    function hide()
+		    {
+		        rule.style.display = "none";
+		    }
+		</script>
+	</body>
+</html>

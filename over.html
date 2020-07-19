@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>色彩之旅</title>
+		<style>
+		body{
+			margin:0;
+			padding: 0;
+		}
+		.end{
+			width:85%;
+			text-align:center;
+			margin: auto;
+		}
+		#bj2{
+			width:90%;
+			border:7px dashed bisque;
+			-webkit-animation: mymove 5s infinite; /* 边框颜色变换动画 */
+    		animation: mymove 5s infinite;
+		}
+		/* Chrome, Safari, Opera */
+		@-webkit-keyframes mymove {
+		    50% {border-color:darkseagreen;}
+		}
+		
+		/* Standard syntax */
+		@keyframes mymove {
+		    50% {border-color:darkseagreen;}
+		}
+		#fly{
+			width:30%;
+			position:absolute;
+			top:50px;
+			left:700px;	
+			-webkit-animation: mymove 5s infinite; /*图片向左移动动画 */
+    		animation: mymove 5s infinite;
+		}
+		/* Chrome, Safari, Opera */
+		@-webkit-keyframes mymove {
+		    50% {left: 500px;}
+		}
+		
+		/* Standard syntax */
+		@keyframes mymove {
+		    50% {left: 500px;}
+		}
+		#again{			
+			position:absolute;
+			width:20%;
+			top:450px;
+			left:800px;
+		}
+		#again:hover{
+			width:25%;
+			top:430px;
+			left:700px;
+		}
+		#again:active{
+			opacity:0.3;
+		}
+		#jieshu{
+			width:25%;
+			font:bold 3.8em "幼圆";
+			color:burlywood;
+			position:absolute;
+			left:300px;
+			top:300px;
+			-webkit-animation: mymove2 5s infinite; /* 字体大小变换动画 */
+   			animation: mymove2 5s infinite;
+		}
+		/* Chrome, Safari, Opera */
+		@-webkit-keyframes mymove2 {
+		    50% {font-size: 70px;}
+		}
+		
+		/* Standard syntax */
+		@keyframes mymove2 {
+		    50% {font-size: 70px;}
+		}		
+		</style>
+	</head>
+	<body>
+		<div class="end">
+			<p id="jieshu">游戏结束</p>
+			<img id="bj2" src="img/bj2.jpg"></img>
+			<img id="fly" src="img/fly.png"></img>
+			<a href="index.html"><img id="again" src="img/again.png"></img></a>
+		</div>
+	</body>
+</html>
